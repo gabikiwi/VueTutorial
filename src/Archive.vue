@@ -1,22 +1,17 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <p>{{greeting()}}</p>
-    <archive></archive>
+    <ul>
+        <li v-for="myVar in myArray">{{myVar}}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Client from './Archive.vue'
-
 export default {
-  components: {
-    archive:Client
-  },
   name: 'app',
   data () {
     return {
-      title: 'Client Application!'
+        myArray:['Ana te iubesc!', 'Magda','Gabriel']
     }
   },
   methods:{
