@@ -11,7 +11,12 @@
 
 <script>
 export default {
-  props: ["myArray"],
+  props: {
+      myArray:{
+          type:Array,
+          required:true
+      }
+  },
   data() {
     return {};
   }
