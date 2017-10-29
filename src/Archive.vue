@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Hi, from the nested component</h1>
     <ul>
         <li v-for="myVar in myArray">{{myVar}}</li>
     </ul>
@@ -25,5 +26,8 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+h1{
+  color: purple;
+}
 </style>
