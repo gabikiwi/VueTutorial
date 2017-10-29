@@ -1,0 +1,52 @@
+<template>
+<div id="myArray">
+    <ul>
+    <li v-for="myVar in myArray" v-on:click="myVar.show=!myVar.show">
+        <h2>{{myVar.name}}</h2>
+        <h3 v-show="myVar.show">{{myVar.speciality}}</h3>
+    </li>
+    </ul>
+</div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      myArray: [
+        {
+          name: "Gabriel",
+          speciality: "Senior technology Consultant",
+          show: false
+        },
+        { name: "Ana Maria", speciality: "copil si elev", show: false },
+        { name: "Magda", speciality: "Asistent SAP", show: false }
+      ]
+    };
+  }
+};
+</script>
+
+<style scoped>
+#myArray {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  flex-grow: 1;
+  flex-basis: 300px;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #222;
+  margin: 10px;
+}
+</style>
