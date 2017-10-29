@@ -11,18 +11,9 @@
 
 <script>
 export default {
+  props: ["myArray"],
   data() {
-    return {
-      myArray: [
-        {
-          name: "Gabriel",
-          speciality: "Senior technology Consultant",
-          show: false
-        },
-        { name: "Ana Maria", speciality: "copil si elev", show: false },
-        { name: "Magda", speciality: "Asistent SAP", show: false }
-      ]
-    };
+    return {};
   }
 };
 </script>
