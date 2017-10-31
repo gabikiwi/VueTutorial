@@ -1,8 +1,10 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:propTitle="propTitle"></app-header>
     <app-content v-bind:myArray="myArray"></app-content>
-    <app-footer></app-footer>
+    <hr>
+    <app-content v-bind:myArray="myArray"></app-content>
+    <app-footer v-bind:propTitle="propTitle"></app-footer>
   </div>
 </template>
 
@@ -21,10 +23,11 @@ export default {
   data() {
     return {
       myArray: [
-        { name: "Gabriel",speciality: "Senior technology Consultant", show: false},
-        { name: "Ana Maria", speciality: "copil si elev", show: false },
-        { name: "Magda", speciality: "Asistent SAP", show: false }
-      ]
+        { name: "Slot1", speciality: "DescriptionSlot1", show: false},
+        { name: "Slot2", speciality: "DescriptionSlot2", show: false },
+        { name: "Slot3", speciality: "DescriptionSlot3", show: false }
+      ],
+      propTitle:"!!Another Client!!"
     };
   }
 };

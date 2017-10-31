@@ -1,6 +1,8 @@
 <template>
  <header>
-     <h1>{{title}}</h1>
+    <!-- <h1>{{title}}</h1> -->
+    <h1>{{propTitle}}</h1> 
+    <button v-on:click="changePrimitive">Change the Primitive</button>
  </header>
 </template>
 
@@ -9,10 +11,20 @@
 
 export default {
   name: "app",
+  props:{
+      propTitle:{
+          type:String
+      }
+  },
   data() {
     return {
-        title:'Client name'
+        title:'Archive'
     };
+  },
+  methods: {
+    changePrimitive: function(){
+      this.propTitle = "Archive"; 
+    }
   }
 };
 </script>

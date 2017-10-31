@@ -6,6 +6,7 @@
         <h3 v-show="myVar.show">{{myVar.speciality}}</h3>
     </li>
     </ul>
+    <button v-on:click="deleteArrayElement">Delete an Reference</button>
 </div>
 </template>
 
@@ -19,6 +20,11 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    deleteArrayElement: function(){
+      this.myArray.pop(); 
+    }
   }
 };
 </script>

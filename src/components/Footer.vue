@@ -1,14 +1,19 @@
 <template>
   <footer>
-    <p>{{copyright}}</p>
+    <p>{{copyright}} {{propTitle}}</p>
   </footer>
 </template>
 
 <script>
 export default {
+  props:{
+      propTitle:{
+          type:String
+      }
+  },
   data() {
     return {
-    copyright:'Copyright 2017 Gabriel Chivoiu'
+    copyright:'Copyright 2017 Seers CX'
 
     };
   }
