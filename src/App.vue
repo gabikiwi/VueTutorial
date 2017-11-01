@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header v-bind:propTitle="propTitle"></app-header>
+    <app-header v-bind:propTitle="propTitle" v-on:changePrimitive="updateTitle($event)"></app-header>
     <app-content v-bind:myArray="myArray"></app-content>
     <hr>
     <app-content v-bind:myArray="myArray"></app-content>
@@ -29,6 +29,12 @@ export default {
       ],
       propTitle:"!!Another Client!!"
     };
+  },
+  methods:{
+    updateTitle:function(pUpdate){
+      console.log("Inside updateTitle");
+      this.propTitle=pUpdate;
+    }
   }
 };
 </script>

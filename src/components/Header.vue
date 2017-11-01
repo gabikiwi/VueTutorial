@@ -23,7 +23,9 @@ export default {
   },
   methods: {
     changePrimitive: function(){
-      this.propTitle = "Archive"; 
+      //this.propTitle="BalaBla" ; 
+      console.log("inside changePrimitive");
+      this.$emit('changePrimitive', 'Archive');
     }
   }
 };
