@@ -33,6 +33,7 @@ export default {
   methods:{
     updateTitle:function(pUpdate){
       console.log("Inside updateTitle");
+      //this will take the event
       this.propTitle=pUpdate;
     }
   }
